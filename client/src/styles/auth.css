@@ -1,0 +1,104 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--wa-teal) 0%, var(--wa-teal) 200px, var(--bg-primary) 200px);
+  padding: 20px;
+}
+
+.auth-box {
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header .whatsapp-icon {
+  font-size: 60px;
+  color: var(--wa-green);
+  margin-bottom: 15px;
+}
+
+.auth-header h1 {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  color: var(--text-primary);
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--wa-green);
+}
+
+.form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.auth-box button[type="submit"] {
+  padding: 14px;
+  background: var(--wa-green);
+  color: white;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.auth-box button[type="submit"]:hover {
+  background: var(--wa-green-dark);
+}
+
+.auth-box button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 12px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: var(--wa-green);
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}

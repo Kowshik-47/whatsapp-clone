@@ -1,0 +1,249 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+}
+
+.modal {
+  width: 100%;
+  max-width: var(--sidebar-width);
+  height: 100%;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal.slide-in {
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.modal-header {
+  height: var(--header-height);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-secondary);
+}
+
+.modal-header button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 22px;
+}
+
+.modal-header h2 {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.modal .search-box {
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+}
+
+.modal-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Contacts List */
+.contacts-list {
+  padding: 10px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.contact-item:hover {
+  background: var(--bg-hover);
+}
+
+.contact-item.selected {
+  background: var(--bg-secondary);
+}
+
+.contact-item img {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info .name {
+  display: block;
+  font-size: 17px;
+  color: var(--text-primary);
+}
+
+.contact-info .about {
+  display: block;
+  font-size: 14px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.check-icon {
+  color: var(--wa-green);
+  font-size: 22px;
+}
+
+/* Selected Chips */
+.selected-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 15px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px 5px 5px;
+  background: var(--bg-hover);
+  border-radius: 20px;
+}
+
+.chip img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.chip span {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.chip button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Group Info */
+.group-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.group-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.group-name-input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.group-name-input input {
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+  border-bottom: 2px solid var(--wa-green);
+  color: var(--text-primary);
+  font-size: 18px;
+  text-align: center;
+}
+
+.participants-count {
+  margin: 30px 0 15px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.participants-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: -8px;
+  justify-content: center;
+}
+
+.participants-preview img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+  margin-left: -8px;
+}
+
+/* Next/Create Button */
+.next-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--wa-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+.next-btn:hover {
+  background: var(--wa-green-dark);
+}
+
+.loading, .no-results {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    max-width: 100%;
+  }
+}

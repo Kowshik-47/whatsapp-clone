@@ -1,0 +1,142 @@
+:root {
+  /* WhatsApp Colors */
+  --wa-green: #00a884;
+  --wa-green-dark: #008069;
+  --wa-green-light: #25d366;
+  --wa-teal: #128c7e;
+  
+  /* Dark Theme */
+  --bg-primary: #111b21;
+  --bg-secondary: #202c33;
+  --bg-chat: #0b141a;
+  --bg-message-sent: #005c4b;
+  --bg-message-received: #202c33;
+  --bg-hover: #2a3942;
+  
+  --text-primary: #e9edef;
+  --text-secondary: #8696a0;
+  --text-muted: #667781;
+  
+  --border-color: #222d34;
+  --divider: #2a3942;
+  
+  /* Sizing */
+  --sidebar-width: 400px;
+  --header-height: 60px;
+  --input-height: 62px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--wa-green);
+}
+
+/* Avatar */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Loading Screen */
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--wa-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-screen p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-hover);
+  border-radius: 3px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  min-width: 180px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  text-align: left;
+  font-size: 14.5px;
+  transition: background 0.15s;
+}
+
+.dropdown-menu button:hover {
+  background: var(--bg-hover);
+}
+
+.menu-wrapper {
+  position: relative;
+}
